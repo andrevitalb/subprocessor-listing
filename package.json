@@ -1,24 +1,59 @@
 {
-  "name": "subprocessor-listing",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.4",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.23",
-    "@types/react": "18.0.0",
-    "@types/react-dom": "18.0.0",
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4",
-    "typescript": "4.6.3"
-  }
+	"name": "subprocessor-listing",
+	"private": true,
+	"engines": {
+		"node": "^16.5.0"
+	},
+	"scripts": {
+		"dev": "yarn start:dev",
+		"build": "next build",
+		"start": "next start",
+		"start:dev": "concurrently -k \"next dev -p $(grep '^PORT=' <.env.development | cut -d= -f2)\"",
+		"typecheck": "tsc --pretty",
+		"typecheck:watch": "yarn typecheck --watch",
+		"lint": "eslint --cache --ext .ts,.tsx ."
+	},
+	"dependencies": {
+		"@react-hook/window-size": "^3.0.7",
+		"@tailwindcss/typography": "^0.5.2",
+		"autoprefixer": "^10.4.4",
+		"classnames": "^2.3.1",
+		"lightgallery": "^2.4.0",
+		"lodash": "^4.17.21",
+		"next": "12",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"styled-components": "^5.3.5",
+		"tailwindcss": "^3.0.23",
+		"twin.macro": "^2.8.2",
+		"web-vitals": "^2.1.4",
+		"yup": "^0.32.11"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.9",
+		"@types/node": "^17.0.23",
+		"@types/react": "^17.0.39",
+		"@types/react-dom": "^17.0.11",
+		"@types/styled-components": "^5.1.25",
+		"babel-loader": "^8.2.4",
+		"babel-plugin-styled-components": "^2.0.7",
+		"babel-plugin-twin": "^1.0.2",
+		"babel-preset-react-app": "^10.0.1",
+		"concurrently": "^7.1.0",
+		"eslint": "^8.13.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-react-app": "^7.0.0",
+		"eslint-plugin-flowtype": "^8.0.3",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-react": "^7.29.4",
+		"eslint-plugin-react-hooks": "^4.4.0",
+		"git-format-staged": "^3.0.0",
+		"husky": "^7.0.4",
+		"postcss": "^8.4.12",
+		"prettier": "^2.6.2",
+		"typescript": "4.4.4"
+	}
 }
