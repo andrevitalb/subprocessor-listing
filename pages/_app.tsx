@@ -1,7 +1,8 @@
+import { ModalProvider } from "contexts/ModalContext"
+import { SubprocessorsProvider } from "contexts/SubprocessorsContext"
 import { ComponentType } from "react"
 import "styles/globals.css"
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { GlobalStyles } from "twin.macro"
 
 /**
  * The App component implicitly wraps every page component. This code runs
@@ -17,8 +18,11 @@ export default function App<Props>({
 	pageProps: Props
 }) {
 	return (
+		<ModalProvider>
+			<SubprocessorsProvider>
+				<GlobalStyles />
 				<Component {...pageProps} />
+			</SubprocessorsProvider>
+		</ModalProvider>
 	)
 }
-
-export default MyApp
