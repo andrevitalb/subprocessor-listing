@@ -13,9 +13,17 @@ const customStyles: TableStyles = {
 	},
 	headRow: {
 		style: {
-			borderBottom: "1px solid #999999", // gray-200
+			borderBottom: "1px solid #522929", // gray-200
 			paddingBottom: ".75rem",
 			paddingTop: ".75rem",
+			width: "auto",
+			minWidth: "100%",
+		},
+	},
+	cells: {
+		style: {
+			wordBreak: "normal",
+			overflowX: "auto",
 		},
 	},
 	rows: {
@@ -34,6 +42,8 @@ const customStyles: TableStyles = {
 			// Makes the table fit in the available width instead of showing
 			// a horizontal scroll bar.
 			tableLayout: "fixed",
+			width: "auto",
+			minWidth: "100%",
 		},
 	},
 }

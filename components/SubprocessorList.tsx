@@ -40,14 +40,20 @@ const SubprocessorList = () => {
 	}
 
 	return (
-		<div tw="max-w-screen-lg w-full mx-auto py-10">
+		<div tw="max-w-screen-lg w-full mx-auto py-10 px-4">
 			<StyledHeader>
-				<h2 tw="text-2xl font-bold">Subprocessors</h2>
-				<Button type="button" onClick={handleAddNew}>
+				<h2 tw="text-2xl font-bold w-full text-center sm:w-auto">
+					Subprocessors
+				</h2>
+				<Button
+					type="button"
+					onClick={handleAddNew}
+					tw="block w-full my-2 sm:(w-auto my-0)"
+				>
 					Add Subprocessor
 				</Button>
 			</StyledHeader>
-			<Table columns={tableColumns} data={subprocessors} />
+			<Table columns={tableColumns} data={subprocessors} fixedHeader />
 			{showAddNewModal && show && (
 				<Modal>
 					<SubprocessorForm
@@ -127,8 +133,8 @@ const ItemActions = ({ subprocessor }: { subprocessor: Subprocessor }) => {
 	)
 }
 
-const StyledHeader = tw.header`flex items-center justify-between`
-const ItemActionsWrapper = tw.div`flex justify-end items-center space-x-4 w-full`
-const ActionButton = tw.button`font-semibold hover:underline`
+const StyledHeader = tw.header`flex flex-wrap items-center justify-between w-full`
+const ItemActionsWrapper = tw.div`flex flex-wrap justify-end items-center space-x-4 w-full`
+const ActionButton = tw.button`font-semibold hover:underline py-2`
 
 export default SubprocessorList
