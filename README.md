@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Subprocessor list
 
-## Getting Started
+## First Deliverable
 
-First, run the development server:
+This project addresses [Trustpage's Code Challenge](https://trustpage.notion.site/Trustpage-Senior-Full-Stack-Software-Engineer-Technical-Challenge-d01e8acd4a4d496c8c1ae8fadd59ba89).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The first deliverable consists of a Next.js application that renders a subprocessor
+list based on data provided. It does not involve a persistent back-end. It only uses
+React's Context API for data storage.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The decision to use libraries included in this project (Formik, Yup, react-data-table-component,
+Tailwind, twin.macro, etc.) were taken based on familiarity with them & knowledge of what can be
+accomplished by them.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+There were some minor issues related to some fields not properly adjusting the column size, when
+the information exceeds the base width of the column. Worked around it by overriding the base
+`minWidth` of cells. Might've looked for a more elegant solution (something using `max-content` maybe?).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Another decision that involved a bit more in-depth thought was how to handle the modals. Here are
+some of the factors that I took into consideration:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-   Managing it globally?
+-   One base modal with flexible content or multiple modals?
+-   Handling which modal to display in the most compact way.
 
-## Learn More
+Other than that, there weren't much complex decisions that I had to take.
 
-To learn more about Next.js, take a look at the following resources:
+### Getting started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### _Install_
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Run `yarn` from the project root.
 
-## Deploy on Vercel
+### _Frontend_
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the Frontend Next.js server: `yarn dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Using the App
+
+The application can be accessed through http://localhost:35001
+
+---
+
+## Second deliverable
+
+Contents for a data model can be found in [this document](./docs/data-model.md)
