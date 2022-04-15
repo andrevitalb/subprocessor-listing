@@ -13,15 +13,15 @@ type SubprocessorItemActions = "none" | "add" | "delete"
 const tableColumns: TableColumn<Subprocessor>[] = [
 	{
 		name: "Name",
-		selector: ({ name }) => name,
+		cell: ({ name }) => <p>{name}</p>,
 	},
 	{
 		name: "Purpose",
-		selector: ({ purpose }) => purpose,
+		cell: ({ purpose }) => <p>{purpose}</p>,
 	},
 	{
 		name: "Location",
-		selector: ({ location }) => location,
+		cell: ({ location }) => <p>{location}</p>,
 	},
 	{
 		cell: (subprocessor) => <ItemActions subprocessor={subprocessor} />,
