@@ -27,7 +27,7 @@ const sizes: Record<Sizes, TwStyle> = {
 }
 
 const Button = styled.button<ButtonProps>(
-	({ color = "teal", size = "md", rounded = "lg" }: ButtonProps) => [
+	({ color = "teal", size = "sm", rounded = "lg" }: ButtonProps) => [
 		tw`
         font-bold text-white
 		border-2
