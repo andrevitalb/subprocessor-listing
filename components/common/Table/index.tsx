@@ -9,6 +9,7 @@ const customStyles: TableStyles = {
 		style: {
 			fontSize: "1rem",
 			fontWeight: 600,
+			minWidth: "150px !important",
 		},
 	},
 	headRow: {
@@ -24,6 +25,7 @@ const customStyles: TableStyles = {
 		style: {
 			wordBreak: "normal",
 			overflowX: "auto",
+			minWidth: "150px !important",
 		},
 	},
 	rows: {
