@@ -25,6 +25,7 @@ const tableColumns: TableColumn<Subprocessor>[] = [
 	},
 	{
 		cell: (subprocessor) => <ItemActions subprocessor={subprocessor} />,
+		width: "clamp(100px, 10vw, 200px)",
 	},
 ]
 
