@@ -9,11 +9,11 @@ The following is an Entity-Relationship Diagram of a possible implementation of 
 This assumes the following:
 
 - Once a company adds a subprocessor, all other companies are able to add them to their own list of subprocessors.
-- If any company updates a subprocessor entry, the update will be reflected on all other tables where said subprocessor is included. (Following the `"Single source of truth"` that was required.
+- If any company updates a subprocessor entry, the update will be reflected on all other tables where said subprocessor is included. (Following the `"Single source of truth"` that was required).
 - The only fields that were considered to be unique are each table's ID's.
 	- Subprocessors can have same names in this instance. If it were desired for all subprocessor names to be unique, further parameters (casing, whitespace consideration, special characters, etc) and string checking could be implemented.
 
-## Exaple walkthrough
+## Example walkthrough
 
 Some standard processes with this data model would be :
 
